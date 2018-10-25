@@ -1,0 +1,30 @@
+class SetOfStacks(object):
+# creating a stack of stacks (or a nested array) which is defined by an input capacity
+	def __init__(self, cap):
+		self.data=[]
+		if cap < 1:
+			raise NameError("NotPossible")
+		else:
+			self.cap=cap
+	
+	def push(self, item):
+		if self.data == []:
+			self.data.append([item])
+		else:
+		# if the stack/array is at capacity we create a new stack
+			if len(self.data[-1]) >= cap:
+				self.data.append([item])
+			else:
+		# but if the array is not at capacity we add the item to that array
+				self.data[-1].append(item)
+				
+	def pop(self):
+		if self.data == []
+			raise NameError(" ")
+		else:
+			popped=self.data[-1][-1]
+			if len(self.data[-1])==1:
+				del self.data[-1]
+			else:
+				del self.data[-1][-1]
+		return (popped)
